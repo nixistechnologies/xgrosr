@@ -1,3 +1,4 @@
 app/migrations
 *.pyc
 xgrosr/__pycache__
+media/
