@@ -38,7 +38,20 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app',
+    'graphene_django',
+    'corsheaders',
+    'graphene'
 ]
+
+JWT_VERIFY_EXPIRATION = False
+CORS_ORIGIN_ALLOW_ALL = True
+
+GRAPHENE = {
+    'SCHEMA': 'schema.schema', # Where your Graphene schema lives
+    'MIDDLEWARE': [
+        'graphql_jwt.middleware.JSONWebTokenMiddleware',
+    ],    
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
