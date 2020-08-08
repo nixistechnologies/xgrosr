@@ -17,19 +17,12 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls.static import static
 from django.conf import settings
-<<<<<<< HEAD
 from graphene_django.views import GraphQLView
 from django.views.decorators.csrf import csrf_exempt
-
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('graphql/',csrf_exempt(GraphQLView.as_view(graphiql=True))),
-=======
 from app.views import *
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',Home_page,name="Home_page"),
     path('category/',category_page,name='category_page')
->>>>>>> 09c505450b9d6c29878b9906175b4bcec7b953a6
+    path('graphql/',csrf_exempt(GraphQLView.as_view(graphiql=True))),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
