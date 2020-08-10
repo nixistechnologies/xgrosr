@@ -1,7 +1,6 @@
 app/migrations
 *.pyc
 xgrosr/__pycache__
-media/
-<<<<<<< HEAD
+# media/
 py3/
 *.sqlite3

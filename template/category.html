@@ -1,15 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Category Page</title>
-</head>
-<body>
-        <div>
-            <div style="text-align: center;">
-                <h2 style="font-size: 40px;">GroceryHub</h2>
+{% extends 'layout/primaryLayout.html' %}
+
+{% block title %}
+
+Category | GrosrX
+
+{% endblock  %}
+
+
+{% block main %}
+
+<style>
+
+
+.in{
+    position: absolute;
+    top: 80%;
+    background: rgba(0,0,0,0.3);
+    width: 100%;
+    padding: 0 10px;
+}
+.in h2{
+    /* font-weight: bold; */
+    font-size: 20px;
+    color: white;
+}
+
+</style>
+
+<div class="container" style="margin-top: 50px;padding: 3rem;">
+    <h1 class="title" style="text-align: center;">Categories</h1>
+    <div style="display: flex;flex-flow: wrap;">
+        {% for i in category %}
+            <div style="flex: 1 25%;">
+                <div class="card_">
+                    <div style="background: url(/media/{{i.image}}); height: 150px; position: relative;margin: 15px;">
+                        <div class="in">
+                            <h2>{{i.name}}</h2>
+                        </div>
+                    </div>
+                    
+                </div>
+                
             </div>
-        </div>
-</body>
-</html>
+        {% endfor %}
+    </div>
+
+
+</div>
+
+
+{% endblock %}

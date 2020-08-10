@@ -7,5 +7,9 @@ def Home_page(request):
     return render(request,'home.html')
 
 
+def listPage(request):
+    return render(request,'listPage.html')
+
 def category_page(request):
-    return render (request,'category.html')
+    c = Category.objects.all()
+    return render (request,'category.html',{'category':c})

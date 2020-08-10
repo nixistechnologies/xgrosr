@@ -23,6 +23,7 @@ from app.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',Home_page,name="Home_page"),
+    path('list/',listPage,name="Home_page"),
     path('category/',category_page,name='category_page'),
     path('graphql/',csrf_exempt(GraphQLView.as_view(graphiql=True))),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
