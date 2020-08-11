@@ -6,10 +6,16 @@ from app.models import *
 def Home_page(request):
     return render(request,'home.html')
 
-
 def listPage(request):
     return render(request,'listPage.html')
 
 def category_page(request):
     c = Category.objects.all()
     return render (request,'category.html',{'category':c})
+
+def list_page(request,d):
+    # cat = Category.objects.get(id=d)
+    # cat1 = Category.objects.filter(category=d)
+    cat1 = Product.objects.filter(category=d)
+    print(cat1)
+    return render(request,'listPage.html')

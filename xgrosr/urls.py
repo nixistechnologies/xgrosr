@@ -26,4 +26,5 @@ urlpatterns = [
     path('list/',listPage,name="Home_page"),
     path('category/',category_page,name='category_page'),
     path('graphql/',csrf_exempt(GraphQLView.as_view(graphiql=True))),
+    path('listpage/<int:d>/',list_page,name="list_page")
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

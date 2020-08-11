@@ -47,7 +47,8 @@ JWT_VERIFY_EXPIRATION = False
 CORS_ORIGIN_ALLOW_ALL = True
 
 GRAPHENE = {
-    'SCHEMA': 'schema.schema', # Where your Graphene schema lives
+    # 'SCHEMA': 'schema.schema',  Where your Graphene schema lives
+    'SCHEMA':'cookbook.schema.schema',
     'MIDDLEWARE': [
         'graphql_jwt.middleware.JSONWebTokenMiddleware',
     ],    

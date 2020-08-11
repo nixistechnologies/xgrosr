@@ -35,7 +35,6 @@ Category | GrosrX
     height: 150px; 
     position: relative;
     margin: 15px;
-    
     border-radius: 10px;
 }
 
@@ -47,12 +46,13 @@ Category | GrosrX
         {% for i in category %}
             <div style="flex: 1 25%;">
                 <div class="card_">
-                    <div class="_bg" style="background: url(/media/{{i.image}});background-size: cover;">
-                        <div class="in">
-                            <h2>{{i.name}}</h2>
+                        <div class="_bg" style="background: url(/media/{{i.image}});background-size: cover;">
+                            <a href="/listpage/{{i.id}}/"> 
+                                <div class="in">
+                                    <h2>{{i.name}}</h2>
+                                </div>
+                            </a>
                         </div>
-                    </div>
-                    
                 </div>
                 
             </div>
