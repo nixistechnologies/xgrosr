@@ -15,15 +15,6 @@ class Category(models.Model):
         return self.name
     
 
-UNITS_CHOICE = (
-    ('kg','kg'),
-    ('gm','gm'),
-    ('l','l'),
-    ('ml','ml'),
-    ('unit','unit'),
-)
-
-
 
 class Product(models.Model):
     name = models.CharField(max_length=80)
@@ -32,7 +23,6 @@ class Product(models.Model):
     discount = models.FloatField()
     qty = models.IntegerField()
     moq = models.IntegerField(default=1,blank=True)
-    units = models.CharField(max_length=20,choices=UNITS_CHOICE)
     inactive = models.BooleanField(default=True,blank=True)
     instock = models.BooleanField(default=False,blank=True)
     sort_desc = models.TextField(null=True,blank=True)
