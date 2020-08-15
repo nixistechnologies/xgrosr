@@ -14,11 +14,6 @@ def category_page(request):
     return render (request,'category.html',{'category':c})
 
 def list_page(request,d):
-    # cat = Category.objects.get(id=d)
-    # cat1 = Category.objects.filter(category=d)
-    print(d)
-    cat1 = Product.objects.filter(category_id=d)
-    # print(cat1)
-    for i in cat1.values():
-        print(i)
-    return render(request,'listPage.html')
+    cat1 = Product.objects.filter(category=d)
+    print(cat1)
+    return render(request,'listPage.html',{'product':cat1})
