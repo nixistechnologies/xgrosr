@@ -21,4 +21,4 @@ def list_page(request,d):
     # print(cat1)
     for i in cat1.values():
         print(i)
-    return render(request,'listPage.html')
+    return render(request,'listPage.html',{"data":cat1})

@@ -7,5 +7,19 @@ List Page GrosrX
 {% endblock  %}
 
 {% block main %}
-    <h2>Working</h2>
+<div class="container" style="margin-top: 50px;padding-top: 3rem;">
+    <h2 class="title" style="text-align: center;">List page</h2>
+    <div class="box">
+        <article class="media">
+            <div style="display: flex;flex-flow: wrap;">
+                {% for i in data %}
+                <div style="flex: 1 25;">
+                    <!-- <img src="/media/{{i.}}"> -->
+                    <span>{{i.name}}</span>
+                </div>
+                {% endfor %}
+            </div>
+        </article>
+    </div>
+</div>
 {% endblock %}
