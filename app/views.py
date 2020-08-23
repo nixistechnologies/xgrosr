@@ -22,3 +22,6 @@ def list_page(request,d):
     for i in cat1.values():
         print(i)
     return render(request,'listPage.html',{"data":cat1})
+    cat1 = Product.objects.filter(category=d)
+    print(cat1)
+    return render(request,'listPage.html',{'product':cat1})

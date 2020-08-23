@@ -23,3 +23,22 @@ List Page GrosrX
     </div>
 </div>
 {% endblock %}
+    <h1 class="title" style="text-align: center;">Categories</h1>
+    <div style="display: flex;flex-flow: wrap;">
+        
+            <p>
+                
+                {% for i in product %}
+                      
+                     {{i.name}}
+
+                {% endfor %}
+                
+            </p>
+        
+    </div>
+
+
+</div>
+
+{% endblock %}
